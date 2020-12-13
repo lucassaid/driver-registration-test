@@ -26,8 +26,7 @@ const UserForm = ({onFinish, initialValues}) => {
       >
         <Select
           showSearch
-          placeholder="Select a person"
-          optionFilterProp="children"
+          placeholder="Elige una marca"
           filterOption={(input, option) =>
             option.label.toLowerCase().indexOf(input.toLowerCase()) >= 0
           }
