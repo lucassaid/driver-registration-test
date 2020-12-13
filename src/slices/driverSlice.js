@@ -10,7 +10,7 @@ export const createNewDriver = createAsyncThunk(
   'driverData/createNewDriver',
   async (driver, thunkAPI) => {
     try {
-      if(driver.name == 'TEST_ERROR') throw new Error('test')
+      if(driver.name === 'TEST_ERROR') throw new Error('test')
       const { data } = await axios.post(apiURL, driver)
       return data
     } catch (error) {

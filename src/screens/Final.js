@@ -81,7 +81,7 @@ const Final = () => {
   const driver = useSelector(driverDataSelector)
   const creationState = useSelector(driverCreationStateSelector)
   
-  if(creationState == 'idle') return null
+  if(creationState === 'idle') return null
 
   const state = states[creationState](driver.name)
 

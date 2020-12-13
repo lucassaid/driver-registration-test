@@ -1,4 +1,4 @@
-export default [ 
+const brands = [ 
   {value: 'Abarth', label: 'Abarth' },
   {value: 'Alfa Romeo', label: 'Alfa Romeo' },
   {value: 'Aston Martin', label: 'Aston Martin' },
@@ -52,3 +52,4 @@ export default [
   {value: 'Volkswagen', label: 'Volkswagen' },
   {value: 'Volvo', label: 'Volvo' },
 ]
+export default brands
