@@ -6,7 +6,14 @@ import {
 import { useDispatch, useSelector } from 'react-redux'
 import { useHistory } from "react-router-dom";
 
-export default function useDriverUpdate(redirectUrl, final) {
+/**
+ * Simple hook to make it easy to add "steps" in the app. It updates
+ * the driver's object in the redux state and navigates to a given path.
+ * @param {string} redirectPath - Path to go after updating
+ * @param {boolean} final - Whether to make the POST request
+ * @returns {Array} current driver object and a function to update it
+ */
+export default function useDriverUpdate(redirectPath, final) {
   const history = useHistory();
   const dispatch = useDispatch()
   const driver = useSelector(driverDataSelector)
@@ -19,9 +26,9 @@ export default function useDriverUpdate(redirectUrl, final) {
     dispatch(updateDriverData(newData))
     
     // redirect
-    history.push(redirectUrl)
+    history.push(redirectPath)
 
-    // POST request to the api (only in the last screen)
+    // POST request to the api (only in the last step)
     final && dispatch(createNewDriver(newData))
   }
   return [driver, updateDriver]

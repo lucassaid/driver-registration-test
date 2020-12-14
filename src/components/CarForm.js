@@ -1,8 +1,7 @@
 import { Form, Input, Select, InputNumber } from 'antd';
 import brands from '../lib/brands'
 import FormContainer from './FormContainer'
-
-const currentYear = new Date().getFullYear()
+import { currentYear } from '../lib/consts'
 
 const UserForm = ({onFinish, initialValues}) => {
   

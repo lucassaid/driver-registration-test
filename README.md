@@ -8,3 +8,8 @@ To run on your machine you can clone this repo and run:
 ```bash
 npm i && npm start
 ```
+
+Run tests:
+```bash
+npm run test
+```

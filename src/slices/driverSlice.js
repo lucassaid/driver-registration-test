@@ -19,12 +19,14 @@ export const createNewDriver = createAsyncThunk(
   }
 )
 
+export const initialState = {
+  data: {},
+  creationState: 'idle'
+}
+
 const driverDataSlice = createSlice({
   name: 'driverData',
-  initialState: {
-    data: {},
-    creationState: 'idle'
-  },
+  initialState,
   reducers: {
     updateDriverData: (state, {payload}) => {
       state.creationState = 'idle'

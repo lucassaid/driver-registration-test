@@ -10,3 +10,4 @@ export const routes = {
   CAR_DATA: '/car-data',
   FINAL: '/final'
 }
+export const currentYear = new Date().getFullYear()

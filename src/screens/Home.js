@@ -28,7 +28,7 @@ const Home = () => {
       >
         <Form.Item
           name="name"
-          rules={[{ required: true, message: 'Ingresa tu nombre' }]}
+          rules={[{ required: true, message: '' }]}
         >
           <Input autoComplete="name" placeholder="Nombre completo" />
         </Form.Item>
