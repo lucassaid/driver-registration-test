@@ -3,7 +3,7 @@ import axios from 'axios'
 import { apiURL } from '../lib/consts'
 
 /*
-* Call this function to fetch driverData from the above api.
+* Call this function to send the POST request to the api.
 * The result will be added to redux store.
 */
 export const createNewDriver = createAsyncThunk(
