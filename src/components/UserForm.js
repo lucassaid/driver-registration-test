@@ -7,7 +7,7 @@ const UserForm = ({onFinish, initialValues = {}}) => {
 
   const preFinish = fieldsValue => {
     const { birthDay, birthMonth, birthYear } = fieldsValue
-    let values = {
+    const values = {
       ...fieldsValue,
       birthdate: `${birthDay}/${birthMonth}/${birthYear}`
     }
